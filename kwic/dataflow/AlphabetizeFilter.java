@@ -15,10 +15,10 @@ class AlphabetizeFilter extends GenericFilter<String, String> {
       if (value == null) {
         break;
       }
-      list.add(value);
+      list.offer(value);
     }
-    for (String line : list) {
-      output.put(line);
+    while (list.peek() != null) {
+      output.put(list.poll());
     }
     output.put(null);
   }
