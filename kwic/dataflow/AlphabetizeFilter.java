@@ -20,5 +20,6 @@ class AlphabetizeFilter extends GenericFilter<String, String> {
     for (String line : list) {
       output.put(line);
     }
+    output.put(null);
   }
 }

@@ -7,6 +7,9 @@ class OutputSink extends GenericSink<String> {
 
   @Override
   protected void processInput(String value){
+    if (value == null) {
+      System.exit(0);
+    }
     System.out.println(value);
   }
 }
