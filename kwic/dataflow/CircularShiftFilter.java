@@ -11,8 +11,12 @@ class CircularShiftFilter extends GenericFilter<String, String> {
   protected void transformPipes(Pipe<String> input, Pipe<String> output){
     while (true) {
       String value = input.nextOrWait();
+      if (value == null) {
+        break;
+      }
       processInput(value, output);
     }
+    output.put(null);
   }
 
   private void processInput(String line, Pipe<String> output) {
