@@ -12,12 +12,8 @@ abstract class GenericFilter<I, O> implements Runnable {
 
   @Override
   public void run() {
-    while (true) {
-      I next = inputPipe.nextOrWait();
-      O result = this.transform(next);
-      outputPipe.put(result);
-    }
+    transformPipes(this.inputPipe, this.outputPipe);
   }
 
-  protected abstract O transform(I inputValue);
+  protected abstract void transformPipes(Pipe<I> input, Pipe<O> output);
 }
