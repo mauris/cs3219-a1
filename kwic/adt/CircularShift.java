@@ -18,8 +18,8 @@ public class CircularShift {
     
     for (int i=0;i<line.length;i++) {
       String[] result = new String[line.length];
-      for (int j = i; j < line.length + i; ++j) {
-        result[j - i] = line[j % line.length];
+      for (int j=i; j<line.length+i; j++) {
+        result[j-i] = line[j%line.length];
       }
       //check if first word is an ignore word
       if (!ignores.contains(result[0].toLowerCase())){
