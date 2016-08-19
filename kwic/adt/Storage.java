@@ -10,7 +10,7 @@ public class Storage{
   
   public void addIgnore(String[] words){
     for (String word : words) {
-      ignoreWords.add(word);
+      ignoreWords.add(word.toLowerCase());
     }
   }
   

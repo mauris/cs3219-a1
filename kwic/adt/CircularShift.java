@@ -22,7 +22,7 @@ public class CircularShift {
         result[j - i] = line[j % line.length];
       }
       //check if first word is an ignore word
-      if (!ignores.contains(result[0])){
+      if (!ignores.contains(result[0].toLowerCase())){
         results.add(String.join(" ", result));
       }
     }
