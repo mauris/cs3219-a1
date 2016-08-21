@@ -1,3 +1,7 @@
+/**
+ * @author Tan Chia Kai
+ */
+
 package kwic.utility;
 
 import java.util.Comparator;

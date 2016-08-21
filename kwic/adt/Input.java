@@ -1,3 +1,7 @@
+/**
+ * @author Tan Chia Kai
+ */
+
 package kwic.adt;
 
 import java.util.Scanner;
@@ -9,7 +13,7 @@ public class Input {
     // read ignore words
     String line = sc.nextLine();
     storage.addIgnore(WordTokenizer.tokenize(line));
-    
+
     // read the lines of texts
     while (sc.hasNextLine()) {
       line = sc.nextLine();

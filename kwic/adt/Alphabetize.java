@@ -1,3 +1,7 @@
+/**
+ * @author Tan Chia Kai
+ */
+
 package kwic.adt;
 
 import java.util.ArrayList;

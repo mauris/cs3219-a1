@@ -1,3 +1,7 @@
+/**
+ * @author Yong Shan Xian
+ */
+
 package kwic.dataflow;
 
 abstract class GenericSingleFilter<I, O> extends GenericFilter<I, O> {

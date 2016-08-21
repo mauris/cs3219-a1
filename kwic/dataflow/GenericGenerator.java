@@ -1,3 +1,7 @@
+/**
+ * @author Yong Shan Xian
+ */
+
 package kwic.dataflow;
 
 abstract class GenericGenerator<T> implements Runnable {

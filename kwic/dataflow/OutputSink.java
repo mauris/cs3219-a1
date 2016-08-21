@@ -1,3 +1,7 @@
+/**
+ * @author Yong Shan Xian
+ */
+
 package kwic.dataflow;
 
 class OutputSink extends GenericSink<String> {

@@ -1,3 +1,7 @@
+**
+ * @author Yong Shan Xian
+ */
+
 package kwic.utility;
 
 public class WordTokenizer {
