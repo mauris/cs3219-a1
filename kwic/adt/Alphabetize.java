@@ -9,9 +9,8 @@ import java.util.Collections;
 import kwic.utility.AlphabetizeComparator;
 
 public class Alphabetize {
-  public static void process (Storage storage){
-    ArrayList<String> sorted = storage.getResults();
-    Collections.sort(sorted, new AlphabetizeComparator());
-    storage.setFinal(sorted);
+  public static ArrayList<String> process (ArrayList<String> lines){
+    Collections.sort(lines, new AlphabetizeComparator());
+    return lines;
   }
 }
