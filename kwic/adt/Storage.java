@@ -7,6 +7,7 @@ public class Storage{
   private ArrayList<String> ignoreWords = new ArrayList<String>();
   private LinkedList<String[]> lines = new LinkedList<String[]>();
   private ArrayList<String> results = new ArrayList<String>();
+  private ArrayList<String> finalResults = new ArrayList<String>();
   
   public void addIgnore(String[] words){
     for (String word : words) {
@@ -32,6 +33,14 @@ public class Storage{
   
   public ArrayList<String> getResults(){
     return results;
+  }
+  
+  public void setFinal(ArrayList<String> result){
+    finalResults.addAll(result);
+  }
+  
+  public ArrayList<String> getFinal(){
+    return finalResults;
   }
   
   public ArrayList<String> getIgnores(){

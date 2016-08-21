@@ -5,6 +5,7 @@ public class KWIC {
     Storage storage = new Storage();
     Input.retrieveTo(storage);
     CircularShift.process(storage);
-    Output.print(storage.getResults());
+    Alphabetize.process(storage);
+    Output.print(storage.getFinal());
   }
 }
