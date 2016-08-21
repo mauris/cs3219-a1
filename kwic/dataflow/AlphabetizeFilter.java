@@ -1,24 +1,16 @@
 package kwic.dataflow;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
+import kwic.utility.AlphabetizeComparator;
 
 class AlphabetizeFilter extends GenericFilter<String, String> {
   public AlphabetizeFilter(Pipe<String> input, Pipe<String> output) {
     super(input, output);
   }
 
-  private static Comparator<String> createComparator() {
-    return new Comparator<String>() {
-      public int compare(String alpha, String bravo) {
-        return alpha.compareToIgnoreCase(bravo);
-      }
-    };
-  }
-
   @Override
   protected void transformPipes(Pipe<String> input, Pipe<String> output){
-    PriorityQueue<String> list = new PriorityQueue<String>(this.createComparator());
+    PriorityQueue<String> list = new PriorityQueue<String>(new AlphabetizeComparator());
     while (true) {
       String value = input.nextOrWait();
       if (value == null) {
