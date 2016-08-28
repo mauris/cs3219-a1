@@ -14,9 +14,13 @@ class InputGenerator extends GenericGenerator<String> {
   @Override
   public void run() {
     Scanner sc = new Scanner(System.in);
+    // enter the ignore line
+    String line = sc.nextLine().trim();
+    this.putIntoOutput(line);
+
     while (sc.hasNextLine()) {
       // read input and add into pipe
-      String line = sc.nextLine().trim();
+      line = sc.nextLine().trim();
       if ("".equals(line)) {
         break;
       }
